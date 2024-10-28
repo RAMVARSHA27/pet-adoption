@@ -172,6 +172,12 @@
     margin-left: 30px;
 }
 
+.left-pic1>img {
+    height: 205px;
+    margin-left: -4px;
+    position: relative;
+}
+
 .left-para {
     .adopted-pets-num {
         font-size: 40px;
@@ -584,7 +590,7 @@ body {
     font-size: 30px;
     font-family: 'Preahvihear', sans-serif;
     line-height: 1.2;
-    text-align: right;
+    text-align: center;
     padding-right: 40px;
 }
 
@@ -596,6 +602,12 @@ body {
 .right-pic>img {
     height: 200px;
     position: relative;
+    margin-right: 3px;
+    bottom: 15px;
+}
+.right-pic1>img {
+    height: 200px;
+    margin-right: -5px;
     bottom: 15px;
 }
 
@@ -610,19 +622,19 @@ body {
     padding-left: 10px;
 }
 .right-para1 {
-    width: 65vw;
+    width: 70vw;
     color: var(--textGrey);
     font-size: 17px;
     font-family: 'Preahvihear', sans-serif;
     line-height: 1.2;
-    text-align: left;
+    text-align: center;
     padding-right: 30px;
     padding-left: 10px;
 }
 
 .we-do {
     color: var(--orange);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
 }
 

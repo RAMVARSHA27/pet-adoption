@@ -38,13 +38,8 @@ const Footer = (props) => {
             <i className="fa fa-whatsapp"></i> WhatsApp
           </a>
         </p>
-<<<<<<< HEAD
-        <p>&copy; 2023 Kashif Abbas Kazmi</p>
-      </div> */}
-=======
         <p>&copy; 2023 </p>
-      </div>
->>>>>>> 725fbb8 (final commit)
+      </div> */}
     </footer>
   );
 };
