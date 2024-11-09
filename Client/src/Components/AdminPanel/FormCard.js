@@ -110,13 +110,13 @@ const FormCard = (props) => {
           <div className='popup'>
             <div className='popup-content'>
               <p>Pet is Adopted Successfully...</p>
-              {/* <p>
+              <p>
                 Please contact the Adopter at{' '}
                 <a href={`mailto:${props.form.email}`}>{props.form.email}</a>{' '}
                 or{' '}
                 <a href={`tel:${props.form.phoneNo}`}>{props.form.phoneNo}</a>{' '}
                 to arrange the transfer of the pet from our adoption center to their house.
-              </p> */}
+              </p>
             </div>
             <button onClick={() => {
               props.updateCards()

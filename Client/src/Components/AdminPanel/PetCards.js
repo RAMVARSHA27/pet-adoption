@@ -141,13 +141,13 @@ const PetCards = (props) => {
           <div className='popup'>
             <div className='popup-content'>
               <p>Approval Successful...</p>
-              {/* <p>
+              <p>
                 Please contact the customer at{' '}
                 <a href={`mailto:${props.pet.email}`}>{props.pet.email}</a>{' '}
-                or{' '}
-                <a href={`tel:${props.pet.phone}`}>{props.pet.phone}</a>{' '}
+                {/* or{' '}
+                <a href={`tel:${props.pet.phone}`}>{props.pet.phone}</a>{' '} */}
                 to arrange the transfer of the pet from the owner's home to our adoption center.
-              </p> */}
+              </p>
             </div>
             <button onClick={() => {
               setShowApproved(!showApproved)
