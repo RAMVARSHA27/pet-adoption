@@ -8,6 +8,7 @@ function AdoptForm(props) {
   const [familyComposition, setFamilyComposition] = useState("");
   const [formError, setFormError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const [ErrPopup, setErrPopup] = useState(false);
   const [SuccPopup, setSuccPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,9 +18,15 @@ function AdoptForm(props) {
     return emailPattern.test(email);
   };
 
+  const isPhoneNoValid = (phoneNo) => {
+    const phonePattern = /^[0-9]{10}$/; // Pattern for 10-digit phone number
+    return phonePattern.test(phoneNo);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setEmailError(false);
+    setPhoneError(false);
 
     if (
       !email ||
@@ -37,14 +44,18 @@ function AdoptForm(props) {
       return;
     }
 
+    if (!isPhoneNoValid(phoneNo)) {
+      setPhoneError(true);
+      return;
+    }
+
     try {
+      setIsSubmitting(true);
 
-      setIsSubmitting(true)
-
-      const response = await fetch('http://localhost:4000/form/save', {
-        method: 'POST',
+      const response = await fetch("http://localhost:4000/form/save", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email,
@@ -52,27 +63,26 @@ function AdoptForm(props) {
           livingSituation,
           previousExperience,
           familyComposition,
-          petId: props.pet._id
-        })
-      })
+          petId: props.pet._id,
+        }),
+      });
 
       if (!response.ok) {
-        setErrPopup(true)
+        setErrPopup(true);
         return;
       } else {
-        setSuccPopup(true)
+        setSuccPopup(true);
       }
-    }
-    catch (err) {
-      setErrPopup(true)
+    } catch (err) {
+      setErrPopup(true);
       console.error(err);
       return;
     } finally {
-      setIsSubmitting(false)
-
+      setIsSubmitting(false);
     }
 
     setEmailError(false);
+    setPhoneError(false);
     setFormError(false);
     setEmail("");
     setPhoneNo("");
@@ -91,28 +101,16 @@ function AdoptForm(props) {
           </div>
           <div className="pet-info">
             <h2>{props.pet.name}</h2>
-            <p>
-              <b>Type:</b> {props.pet.type}
-            </p>
-            <p>
-              <b>Age:</b> {props.pet.age}
-            </p>
-            <p>
-              <b>Location:</b> {props.pet.area}
-            </p>
+            <p><b>Type:</b> {props.pet.type}</p>
+            <p><b>Age:</b> {props.pet.age}</p>
+            <p><b>Location:</b> {props.pet.area}</p>
           </div>
         </div>
         <div className="form-div">
           <form onSubmit={handleSubmit} className="custom-form">
             <div className="custom-input-box">
-              <div className="email-not-valid">
-                <label className="custom-label">Email:</label>
-                {emailError && (
-                  <p>
-                    Please provide valid email address.
-                  </p>
-                )}
-              </div>
+              <label className="custom-label">Email:</label>
+              {emailError && <p>Please provide a valid email address.</p>}
               <input
                 type="text"
                 value={email}
@@ -122,6 +120,7 @@ function AdoptForm(props) {
             </div>
             <div className="custom-input-box">
               <label className="custom-label">Phone No.</label>
+              {phoneError && <p>Please provide a valid 10-digit phone number.</p>}
               <input
                 type="text"
                 value={phoneNo}
@@ -156,20 +155,16 @@ function AdoptForm(props) {
                 className="custom-input"
               />
             </div>
-            {formError && (
-              <p className="error-message">Please fill out all fields.</p>
-            )}
+            {formError && <p className="error-message">Please fill out all fields.</p>}
             <button disabled={isSubmitting} type="submit" className="custom-cta-button custom-m-b">
               {isSubmitting ? 'Submitting' : 'Submit'}
             </button>
             {ErrPopup && (
               <div className="popup">
                 <div className="popup-content">
-                  <h4>
-                    Oops!... Connection Error.
-                  </h4>
+                  <h4>Oops!... Connection Error.</h4>
                 </div>
-                <button onClick={(e) => (setErrPopup(!ErrPopup))} className="close-btn">
+                <button onClick={() => setErrPopup(!ErrPopup)} className="close-btn">
                   Close <i className="fa fa-times"></i>
                 </button>
               </div>
@@ -177,14 +172,15 @@ function AdoptForm(props) {
             {SuccPopup && (
               <div className="popup">
                 <div className="popup-content">
-                  <h4>
-                    Adoption Form of {props.pet.name} is Submitted; we'll get in touch with you soon for further process.
-                  </h4>
+                  <h4>Adoption Form of {props.pet.name} is Submitted; we'll get in touch with you soon for further process.</h4>
                 </div>
-                <button onClick={(e) => {
-                  setSuccPopup(!SuccPopup);
-                  props.closeForm();
-                }} className="close-btn">
+                <button
+                  onClick={() => {
+                    setSuccPopup(!SuccPopup);
+                    props.closeForm();
+                  }}
+                  className="close-btn"
+                >
                   Close <i className="fa fa-times"></i>
                 </button>
               </div>

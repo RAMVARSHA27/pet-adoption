@@ -5,9 +5,9 @@
 }
 
 :root {
-    --orange: #fea034;
-    --hoverorange: #ff9317;
-    --Lightorange: rgb(231, 158, 75);
+    --orange: #368346;
+    --hoverorange: #6dc491;
+    --Lightorange: rgb(123, 190, 134);
     --white: white;
     --black: black;
     --textGrey: rgb(237, 233, 233);
@@ -117,7 +117,6 @@
 
 .homeContainer-right {
     padding-left: 40PX;
-    width: 35vw;
     display: flex;
     justify-content: center;
     align-items: center;

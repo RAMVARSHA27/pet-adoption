@@ -11,6 +11,8 @@ const PostPetSection = () => {
   const [formError, setFormError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [ageError, setAgeError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [type, setType] = useState("None");
   const [picture, setPicture] = useState(null);
@@ -22,6 +24,8 @@ const PostPetSection = () => {
       setEmailError(false);
       setAgeError(false);
       setFormError(false);
+      setNameError(false);
+      setPhoneError(false);
     }
   }, [isSubmitting]);
 
@@ -32,6 +36,16 @@ const PostPetSection = () => {
   const isEmailValid = (email) => {
     const emailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
     return emailPattern.test(email);
+  };
+
+  const isNameValid = (name) => {
+    const namePattern = /^[A-Za-z\s]+$/;
+    return namePattern.test(name);
+  };
+
+  const isPhoneValid = (phone) => {
+    const phonePattern = /^[0-9]{10}$/;
+    return phonePattern.test(phone);
   };
 
   const handleFileChange = (e) => {
@@ -45,6 +59,7 @@ const PostPetSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validate form fields
     if (
       !name ||
       !age ||
@@ -62,6 +77,16 @@ const PostPetSection = () => {
 
     if (!isEmailValid(email)) {
       setEmailError(true);
+      return;
+    }
+
+    if (!isNameValid(name)) {
+      setNameError(true);
+      return;
+    }
+
+    if (!isPhoneValid(phone)) {
+      setPhoneError(true);
       return;
     }
 
@@ -94,6 +119,8 @@ const PostPetSection = () => {
 
       setEmailError(false);
       setFormError(false);
+      setNameError(false);
+      setPhoneError(false);
       setName("");
       setAge("");
       setArea("");
@@ -110,7 +137,6 @@ const PostPetSection = () => {
     }
   };
 
-
   return (
     <section className="post-pet-section">
       <h2>Post a Pet for Adoption</h2>
@@ -124,6 +150,9 @@ const PostPetSection = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+          {nameError && (
+            <p className="error-message">Name must only contain letters.</p>
+          )}
         </div>
 
         <div className="input-box">
@@ -202,6 +231,9 @@ const PostPetSection = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
+          {phoneError && (
+            <p className="error-message">Please provide a valid phone number (10 digits).</p>
+          )}
         </div>
 
         {emailError && (
