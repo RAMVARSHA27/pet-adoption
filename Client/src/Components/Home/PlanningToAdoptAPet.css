@@ -1,0 +1,58 @@
+.adoption-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .adoption-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .adoption-section p {
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .adoption-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 1.5rem;
+  }
+  
+  .adoption-section ul {
+    list-style-type: disc;
+    color: #34495e;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 20px;
+    max-width: 400px;
+  }
+  
+  .adoption-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  
+  .adoption-button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,76 @@
+.form-container {
+    /* Move the form slightly to the left by setting a margin */
+    margin: 0 auto;
+    max-width: 600px;
+    padding-right: 70px;
+    padding-left: 30px;
+    padding-top: 20px;
+    background-color: #ffffff; /* Optional: light background for contrast */
+    /* border-radius: 8px; */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-left: -40px; /* Adjust this value to move form slightly left */
+  }
+  
+  .form-header {
+    color: rgb(29, 70, 99); /* Header color */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: "Verdana", sans-serif;
+  }
+  
+  /* Align label and input fields side by side */
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Style for labels aligned to the left */
+  .form-container label {
+    color: rgb(29, 70, 99); /* Label color */
+    font-weight: bold;
+    width: 30%; /* Adjust label width as needed */
+    text-align: left;
+    margin-right: 10px; /* Add some spacing between label and input */
+  }
+  
+  /* Style input fields on the right */
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="tel"],
+  .form-container select,
+  .form-container textarea,
+  .form-container input[type="file"] {
+    width: 70%; /* Adjust input width as needed */
+    padding: 10px;
+    border: 2px solid rgb(41, 143, 171); /* Border color */
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Center the submit button */
+  .form-container button {
+    background-color: rgb(41, 143, 171); /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+  
+    /* Center button by making it block level and setting auto margins */
+    display: block;
+    margin: 1px auto 0 auto; /* Top margin for spacing, auto for horizontal centering */
+    margin-right: 75px;
+    /* margin-top: 10px; */
+  }
+  
+  /* Button hover effect */
+  .form-container button:hover {
+    background-color: rgb(29, 70, 99); /* Darker shade for hover */
+  }
+  

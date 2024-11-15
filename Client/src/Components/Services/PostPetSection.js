@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import postPet from "./images/postPet.png";
+import "./PostPetForm.css";
 
 const PostPetSection = () => {
   const [name, setName] = useState("");

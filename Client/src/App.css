@@ -5,13 +5,14 @@
 }
 
 :root {
-    --orange: #368346;
-    --hoverorange: #6dc491;
-    --Lightorange: rgb(123, 190, 134);
+    --orange: rgb(41,143,171);
+    --hoverorange: rgb(29,70,99);
+    --Lightorange: rgb(41,143,171);
     --white: white;
     --black: black;
     --textGrey: rgb(237, 233, 233);
-    --darkGrey: #1F2130;
+    --darkGrey: rgb(41,143,171);
+    
 }
 
 .navbar-container {
@@ -21,11 +22,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 35px;
+    /* padding-bottom: 10px; */
 }
 
 .navbar-logo {
-    margin-left: 10px;
-    width: 54px;
+    margin-left: 5px;
+    width: 10px;
 }
 
 .logo-container {
@@ -34,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .logo-container>p {
@@ -78,7 +81,7 @@
 
 .home-container {
     padding: 20px 50px 70px 50px;
-    width: 100vw;
+    width: 16vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +102,7 @@
 }
 
 .home-titlePlusPng {
+    font-size: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -111,12 +115,13 @@
 
 .home-second-para {
     font-size: 18px;
-    color: grey;
+    color: rgb(41,143,171);
     margin: 20px 0px 20px 0px;
 }
 
 .homeContainer-right {
     padding-left: 40PX;
+    width: 35vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +207,7 @@
     margin-top: 20px;
 }
 
+
 .adopt-section img {
     margin: 15px 0;
     max-width: 60%;
@@ -210,12 +216,13 @@
 }
 
 .adopt-section ul {
-    font-family: "Varela Round", sans-serif;
+    /* font-family: "Varela Round", sans-serif; */
+    font-family: "Verdana", sans-serif;
 }
 
 .adopt-section ol {
     font-family: "Varela Round", sans-serif;
-    color: var(--darkGrey);
+    color: rgb(29,70,99);
     list-style: none;
     padding-left: 20px;
 }
@@ -230,14 +237,14 @@
     border-radius: 10px;
     margin-bottom: 20px;
     font-family: "Varela Round", sans-serif;
-    color: var(--orange);
+    color: rgb(29,70,99);
     font-size: 20px;
     margin-top: 20px;
 }
 
 .post-pet-section label {
     font-family: "Varela Round", sans-serif;
-    color: var(--orange);
+    color: rgb(29,70,99);
     font-weight: bold;
     display: block;
 }
@@ -302,9 +309,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-top: 35px;
 }
 
 .form-child-container {
+    /* margin-top: 100px; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -327,7 +336,7 @@
 
 .req-filter-selection:hover {
     cursor: pointer;
-    background-color: var(--hoverorange);
+    background-color: rgb(41,143,171);
     border: none;
 }
 
@@ -340,7 +349,7 @@
 }
 
 .logout-btn:hover {
-    color: rgb(186, 186, 186);
+    color: rgb(41,143,171);
     margin-right: 4px;
     transition: all 0.3s ease;
 }
@@ -355,8 +364,8 @@
 }
 
 .navbar-logo {
-    margin-left: 10px;
-    width: 54px;
+    margin-left: 5px;
+    width: 30px;
 }
 
 .logo-container {
@@ -466,6 +475,7 @@
 }
 
 .home-titlePlusPng {
+    font-size: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -477,8 +487,8 @@
 }
 
 .home-second-para {
-    font-size: 18px;
-    color: rgb(163, 99, 99);
+    font-size: 20px;
+    color: rgb(46, 100, 116);
     margin: 20px 0px 20px 0px;
 }
 
@@ -537,8 +547,8 @@
 
 .planning-container h1 {
     margin-top: 15px;
-    color: var(--darkGrey);
-    border-bottom: 3px solid var(--darkGrey);
+    color: black;
+    border-bottom: 3px solid black;
     padding-bottom: 8px;
 }
 
@@ -548,6 +558,7 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 70px;
+    color: black;
 }
 
 
@@ -557,7 +568,7 @@ body {
     overflow-x: hidden;
 }
 
-.dark-grey-container:first-child {
+/* .dark-grey-container:first-child {
     background-color: rgb(43, 39, 39);
     width: 84vw;
     height: 180px;
@@ -568,13 +579,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 .dark-grey-container{
-    background-color: rgb(73, 25, 25);
+    background-color: rgb(29,70,99);
     width: 84vw;
     height: 180px;
     margin: auto;
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 30px;
     border-radius: 40px 50px 20px 20px;
     display: flex;
@@ -644,7 +655,7 @@ body {
 }
 
 .we-do {
-    color: var(--orange);
+    color: rgb(126, 198, 218);
     margin-bottom: 15px;
     text-align: center;
 }
@@ -661,7 +672,7 @@ body {
 }
 
 .card-container h2 {
-    color: var(--orange);
+    color: rgb(41,143,171);
     text-align: center;
     padding: 30px 0px 30px 0px;
 }
@@ -669,7 +680,7 @@ body {
 .card-container p {
     text-align: center;
     font-size: 15px;
-    color: var(--darkGrey);
+    color: rgb(29,70,99);
 }
 
 
@@ -703,17 +714,19 @@ body {
 }
 
 .adopt-section h2 {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Verdana", sans-serif;
     padding-bottom: 10px;
-    color: var(--orange);
-    border-bottom: 2px solid var(--orange);
+    color: rgb(29,70,99);
+    border-bottom: 2px solid rgb(29,70,99);
     font-size: 32px;
     margin-bottom: 20px;
 }
 
+
+
 .adopt-section img {
     margin: 15px 0;
-    max-width: 60%;
+    max-width: 40%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -726,11 +739,20 @@ body {
 }
 
 .adopt-section h3 {
-    color: var(--orange);
+    color: rgb(29,70,99);
     font-size: 20px;
     margin-top: 20px;
 }
 
+.header-line {
+    border: none;
+    border-top: 2px solid #004080; /* Customize color and thickness */
+    width: 100%; /* Full width */
+    /* margin: 100px 0;  */
+    margin-top: -60px;
+    margin-bottom: 40px;
+  }
+  
 .adopt-section ul {
     font-family: "Varela Round", sans-serif;
     color: var(--darkGrey);
@@ -771,8 +793,8 @@ body {
 .post-pet-section h2 {
     font-family: "Varela Round", sans-serif;
     padding-bottom: 10px;
-    color: var(--orange);
-    border-bottom: 2px solid var(--orange);
+    color: rgb(29,70,99);
+    border-bottom: 2px solid rgb(29,70,99);
     font-size: 32px;
     margin-bottom: 20px;
 }
@@ -785,21 +807,21 @@ body {
 
 .post-pet-section p {
     font-family: "Varela Round", sans-serif;
-    color: var(--darkGrey);
+    color: rgb(29,70,99);;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
 .post-pet-section h3 {
     font-family: "Varela Round", sans-serif;
-    color: var(--orange);
+    color: rgb(29,70,99);;
     font-size: 20px;
     margin-top: 20px;
 }
 
 .post-pet-section label {
     font-family: "Varela Round", sans-serif;
-    color: var(--orange);
+    color: rgb(29,70,99);
     font-weight: bold;
     display: block;
 }
@@ -816,7 +838,7 @@ body {
 .post-pet-section textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(29,70,99);;
     border-radius: 5px;
     max-width: 500px;
     margin: 7px 0;
@@ -875,6 +897,7 @@ body {
     border-radius: 100px;
     border: none;
     padding: 8px 20px;
+    padding-bottom: 35px;
     color: var(--white);
     background-color: var(--orange);
     cursor: pointer;
@@ -893,6 +916,7 @@ body {
 }
 
 .file-input-text {
+    padding-bottom: 20px;
     display: inline-block;
     color: var(--white);
     margin-right: 10px;
@@ -1182,6 +1206,7 @@ body {
 .contactUs-left-para {
     width: 55vw;
     padding: 20px 0px;
+    padding-left: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1190,8 +1215,12 @@ body {
 }
 
 .contactUs-left-para h3 {
-    font-size: 40px;
-    color: var(--darkGrey);
+    font-size: 50px;
+    color: rgb(29,70,99);
+    font-style: italic;
+    padding-left: 110px;
+    width: 100vh;
+    color: #1F2130;
 }
 
 .contactUs-left-para i {
@@ -1211,9 +1240,9 @@ body {
 }
 
 .footer {
-    background-color: var(--textGrey);
+    background-color: rgb(215, 232, 237);
     color: var(--black);
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .footer-content {
@@ -1221,7 +1250,7 @@ body {
 }
 
 .mail-links {
-    color: var(--black);
+    color: rgb(29,70,99);
     text-decoration: none;
 }
 
@@ -1572,7 +1601,7 @@ body {
 
 .req-filter-selection:hover {
     cursor: pointer;
-    background-color: var(--hoverorange);
+    background-color: rgb(41,143,171);
     border: none;
 }
 
